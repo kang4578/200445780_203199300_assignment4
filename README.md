@@ -17,8 +17,8 @@
 5. Exit - exit the loop
  
 ## About developers
-Bowen Liu,
-Yiqian Kang
+Bowen Liu (203199300),
+Yiqian Kang (200445780)
 
 ## License
 Copyright 2022 Bowen Liu and Yiqian Kang
