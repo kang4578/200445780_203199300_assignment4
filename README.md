@@ -7,7 +7,8 @@
 1. void firstFit() //yiqian
 2. void bestFit() //yiqian
 3. void worseFit() //bowen
-4. all the comment //bowen
+4. void main() // bowen
+5. all the comment //bowen
 
 ## Features
 1. RQ - required a memory
