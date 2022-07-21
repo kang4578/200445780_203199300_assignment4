@@ -18,8 +18,8 @@ void bestFit(int process[processListSize], int memory[memoryListSize]){
   int memoryLen=len(memory);
   int processLen=len(process);
   int processInMemoryIndex[processLen];
-  int smallestHoleIndex = 2147483647-1;
-  int smallestHoleSize = 0;
+  int smallestHoleIndex = 0;
+  int smallestHoleSize = 2147483647-1;
   for(int processInitialValue=0; processInitialValue<processLen; processInitialValue++){
       for(int memoryInitialValue=0; memoryInitialValue<allocateLen; memoryInitialValue++){
         if (memory[memoryInitialValue]>=process[processInitialValue] && memory[memoryInitialValue]<smallestHoleSize){
