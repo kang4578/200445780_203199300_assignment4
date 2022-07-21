@@ -67,7 +67,7 @@ void worseFit(int process[processListSize], int memory[memoryListSize]) {
   return processInMemoryIndex;
 }
 
-
+//main function just use to find which method we can use
 void main(int process[processSize], int memory[memorySize]){
   int res;
   int countFreeSize=0;
@@ -82,6 +82,7 @@ void main(int process[processSize], int memory[memorySize]){
   else if(fit=="W"){
     res=worstFit(int process[processSize], int memory[memorySize])
   }
+  //we can use the array to calculte the free size because the free memory will not contain a process index
   for(int index=0; index<processSize; index++){
     if (res[index]==NULL){
       countFreeSize+=memory[index]
