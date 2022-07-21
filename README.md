@@ -10,7 +10,7 @@
 
 # About developers
 Bowen Liu, 
-  Yiqian Kang
+Yiqian Kang
 
 # License
 Copyright 2022 Bowen Liu and Yiqian Kang
