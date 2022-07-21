@@ -16,7 +16,7 @@ void firstFit(int process[processSize], int memory[memorySize]){
         // if we find the first hole which fit the process, we just out the memory loop to find the next process
       }
     }
-    return processInMemoryIndex[processLen];
+    return processInMemoryIndex;
   }
 }
 
@@ -41,7 +41,7 @@ void bestFit(int process[processListSize], int memory[memoryListSize]){
     memory[smallestHoleIndex] -= process[processInitialValue];
     processInMemoryIndex[memoryInitialValue] = processInitialValue;
   }
-  return processInMemoryIndex[processLen];
+  return processInMemoryIndex;
 }
     
 //Worst-fit:  Allocate the largest hole; must also search entire list
@@ -64,10 +64,31 @@ void worseFit(int process[processListSize], int memory[memoryListSize]) {
     memory[biggestHoleIndex]-=process[processInitialValue];
     processInMemoryIndex[memoryInitialValue]=processInitialValue;
   }
-  return processInMemoryIndex[processLen];
+  return processInMemoryIndex;
 }
 
 
+void main(int process[processSize], int memory[memorySize]){
+  int res;
+  int countFreeSize=0;
+  printf("Please enter which kind of fit you want to use: ")
+  scanf("%s",&fit)
+  if(fit=="F"){
+    res=firstFit(int process[processSize], int memory[memorySize])
+  }
+  else if(fit=="B"){
+    res=bestFit(int process[processSize], int memory[memorySize])
+  }
+  else if(fit=="W"){
+    res=worstFit(int process[processSize], int memory[memorySize])
+  }
+  for(int index=0; index<processSize; index++){
+    if (res[index]==NULL){
+      countFreeSize+=memory[index]
+    }
+  }
+  return countFreeSize
+}
 
         
       
