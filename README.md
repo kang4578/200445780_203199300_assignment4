@@ -4,6 +4,11 @@
 ## Screenshots
 
 ## Invidual contributions
+void firstFit() //yiqian
+void bestFit() //yiqian
+void worseFit() //bowen
+all the comment //bowen
+
 
 
 ## Features
