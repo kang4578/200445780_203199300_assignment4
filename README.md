@@ -4,12 +4,10 @@
 ## Screenshots
 
 ## Invidual contributions
-! void firstFit() //yiqian
-! void bestFit() //yiqian
-void worseFit() //bowen
-all the comment //bowen
-
-
+1. void firstFit() //yiqian
+2. void bestFit() //yiqian
+3. void worseFit() //bowen
+4. all the comment //bowen
 
 ## Features
 1. RQ - required a memory
