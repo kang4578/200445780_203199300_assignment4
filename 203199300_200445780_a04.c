@@ -3,7 +3,7 @@ void firstFit(int process[processSize], int memory[memorySize]){
   //here the process and the memory are two arrays contains the size of the process and memory partition
   int memoryLen=len(memory);
   int processLen=len(process);
-  int processInMemoryIndex[memoryLen]
+  int processInMemoryIndex[memoryLen];
   /*processInMemoryIndex is an array with memoryLen and each index means the index of the memory, 
   the content is the processIndex, so if we find the memory index*/
   for(int processInitialValue=0; processInitialValue<processLen; processInitialValue++){
@@ -11,7 +11,7 @@ void firstFit(int process[processSize], int memory[memorySize]){
       if memory[memoryInitialValue] >= process[processInitialValue] {
         memory[memoryInitialValue] = processInitialValue;
         memory[memoryInitialValue] = memory[memoryInitialValue] - process[processInitialValue];
-        processInMemoryIndex[memoryInitialValue]=processInitialValue
+        processInMemoryIndex[memoryInitialValue]=processInitialValue;
         break:
         // if we find the first hole which fit the process, we just out the memory loop to find the next process
       }
@@ -71,8 +71,8 @@ void worseFit(int process[processListSize], int memory[memoryListSize]) {
 void main(int process[processSize], int memory[memorySize]){
   int res;
   int countFreeSize=0;
-  printf("Please enter which kind of fit you want to use: ")
-  scanf("%s",&fit)
+  printf("Please enter which kind of fit you want to use: ");
+  scanf("%s",&fit);
   if(fit=="F"){
     res=firstFit(int process[processSize], int memory[memorySize])
   }
@@ -85,10 +85,10 @@ void main(int process[processSize], int memory[memorySize]){
   //we can use the array to calculte the free size because the free memory will not contain a process index
   for(int index=0; index<processSize; index++){
     if (res[index]==NULL){
-      countFreeSize+=memory[index]
+      countFreeSize+=memory[index];
     }
   }
-  return countFreeSize
+  return countFreeSize;
 }
 
         
